@@ -24,7 +24,7 @@ services:
       - OTEL_EXPORTER_OTLP_HEADERS=${OTEL_EXPORTER_OTLP_HEADERS}
     restart: unless-stopped # possible values are: "no", always", "on-failure", "unless-stopped"
     ports:
-      - "8000:8000"
+      - "8005:8000"
     healthcheck:
       # Adjust below to match your container port
       test: [ "CMD", "curl", "-f", "http://localhost:8000/api/v2/heartbeat" ]
